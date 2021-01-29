@@ -42,8 +42,18 @@ class Airplane {
   */
   
  class Person {
-    
-  }
+   constructor(name, age){
+     this.name = name,
+     this.age = age,
+     this.stomach = []
+   }
+   eat(someFood){
+     if(this.stomach.length < 10){
+       this.stomach.push(someFood);
+     }
+   }
+
+}
   
   /*
     TASK 2
@@ -60,6 +70,10 @@ class Airplane {
   */
   
  class Car {
+    constructor(model, milesPerGallon){
+      this.model = model,
+    this.milesPerGallon = milesPerGallon
+    }
     
   }
   
@@ -76,6 +90,11 @@ class Airplane {
           + {name} and {location} of course come from the instance's own properties.
   */
  class Lambdasian {
+   constructor(object){
+     this.name = object.name,
+     this.age = object.age,
+     this.location = object.location
+   }
     
   }
   
@@ -94,6 +113,12 @@ class Airplane {
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
  class Instructor {
+   constructor(attributes){
+    this.specialty = attributes.specialty,
+    this.favLanguage = attributes.favLanguage,
+    this.catchPhrase = attributes.catchPhrase
+   }
+  
 
  }
   /*
@@ -112,6 +137,11 @@ class Airplane {
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
  class Student {
+   constructor(attributes){
+     this.previousBackground = attributes.previousBackground,
+     this.className = attributes.className,
+     this.favSubjects = attributes.favSubjects
+   }
      
  }
   
@@ -129,6 +159,10 @@ class Airplane {
           + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
   */
  class ProjectManager {
+   constructor(attributes){
+     this.gradClassName = attributes.gradClassName,
+     this.favInstructor = attributes.favInstructor
+   }
      
  }
   /*
